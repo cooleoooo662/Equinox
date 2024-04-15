@@ -3,7 +3,7 @@ FROM node:16
 ENV NODE_ENV=production
 WORKDIR /app
 COPY ["package.json", "package-lock.json*", "./"]
-RUN node install
+RUN npm install
 EXPOSE 8000
 COPY . .
-CMD [ "node", "start" ]
+CMD [ "npm", "start" ]
