@@ -7,4 +7,5 @@ RUN npm install
 EXPOSE 8000
 EXPOSE 8080
 COPY . .
+CMD [ "npm", "audit", "fix", "--force" ]
 CMD [ "npm", "start" ]
